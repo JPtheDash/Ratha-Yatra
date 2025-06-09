@@ -1,11 +1,19 @@
+/* Default styles for all screens */
 body {
-    margin: 0;
-    overflow: hidden;
-    background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Force landscape mode on mobile */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
-  
-  canvas {
-    display: block;
-    touch-action: none;
-  }
-  
+}
