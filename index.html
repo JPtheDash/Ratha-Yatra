@@ -2,40 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ratha Game</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: #000;
-      height: 100%;
-      width: 100%;
-      touch-action: none;
-    }
-
-    canvas {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <canvas id="gameCanvas"></canvas>
-  <script>
-    const canvas = document.getElementById("gameCanvas");
-    const ctx = canvas.getContext("2d");
-
-    function resizeCanvas() {
-      // Match internal size with screen
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas(); // Initial resize before game.js loads
-  </script>
   <script src="game.js"></script>
 </body>
 </html>
